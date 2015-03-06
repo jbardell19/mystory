@@ -1,5 +1,5 @@
 /*!
- * Flat UI Pro v1.3.0 (http://designmodo.com/flat)
+ * Flat UI Pro v1.3.1 (http://designmodo.com/flat)
  * Copyright 2013-2014 Designmodo, Inc.
  */
 
@@ -365,7 +365,7 @@ body {
   font-size: 18px;
   line-height: 1.72222;
   color: #34495e;
-  background-color: transparent;
+  background-color: #fff;
   }
 a {
   color: #16a085;
@@ -2453,66 +2453,6 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 .twitter-typeahead {
   width: 100%;
   }
-.twitter-typeahead .tt-query,
-.twitter-typeahead .tt-hint {
-  height: 42px;
-  padding: 8px 12px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.467;
-  color: #34495e;
-  border: 2px solid #bdc3c7;
-  border-radius: 6px;
-  box-shadow: none;
-  -webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
-          transition: border .25s linear, color .25s linear, background-color .25s linear;
-  }
-.twitter-typeahead .tt-query::-moz-placeholder,
-.twitter-typeahead .tt-hint::-moz-placeholder {
-  color: #b2bcc5;
-  opacity: 1;
-  }
-.twitter-typeahead .tt-query:-ms-input-placeholder,
-.twitter-typeahead .tt-hint:-ms-input-placeholder {
-  color: #b2bcc5;
-  }
-.twitter-typeahead .tt-query::-webkit-input-placeholder,
-.twitter-typeahead .tt-hint::-webkit-input-placeholder {
-  color: #b2bcc5;
-  }
-.form-group.focus .twitter-typeahead .tt-query,
-.form-group.focus .twitter-typeahead .tt-hint,
-.twitter-typeahead .tt-query:focus,
-.twitter-typeahead .tt-hint:focus {
-  border-color: #1abc9c;
-  outline: 0;
-  box-shadow: none;
-  }
-.twitter-typeahead .tt-query[disabled],
-.twitter-typeahead .tt-hint[disabled],
-.twitter-typeahead .tt-query[readonly],
-.twitter-typeahead .tt-hint[readonly],
-fieldset[disabled] .twitter-typeahead .tt-query,
-fieldset[disabled] .twitter-typeahead .tt-hint {
-  color: #d5dbdb;
-  cursor: default;
-  background-color: #f4f6f6;
-  filter: alpha(opacity=70);
-  border-color: #d5dbdb;
-  opacity: .7;
-  }
-.twitter-typeahead .tt-query.flat,
-.twitter-typeahead .tt-hint.flat {
-  border-color: transparent;
-  }
-.twitter-typeahead .tt-query.flat:hover,
-.twitter-typeahead .tt-hint.flat:hover {
-  border-color: #bdc3c7;
-  }
-.twitter-typeahead .tt-query.flat:focus,
-.twitter-typeahead .tt-hint.flat:focus {
-  border-color: #1abc9c;
-  }
 .twitter-typeahead .tt-dropdown-menu {
   width: 100%;
   padding: 5px 0;
@@ -2969,125 +2909,55 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   clear: both;
   font-size: 0;
   }
-.bootstrap-timepicker {
-  position: relative;
-  width: 160px;
+.hasDatepicker {
+  -webkit-appearance: none;
   }
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu {
-  right: 0;
-  left: auto;
+.ui-timepicker-wrapper {
+  z-index: 1000;
+  width: 9em;
+  height: 200px;
+  margin: 5px 0 0;
+  overflow-y: auto;
+  background: #fff;
+  border: solid 2px #1abc9c;
+  border-radius: 6px;
+  outline: none;
   }
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:before {
-  right: 12px;
-  left: auto;
+.ui-timepicker-wrapper.ui-timepicker-with-duration {
+  width: 15em;
   }
-.bootstrap-timepicker.pull-right .bootstrap-timepicker-widget.dropdown-menu:after {
-  right: 13px;
-  left: auto;
+.ui-timepicker-wrapper.ui-timepicker-with-duration.ui-timepicker-step-30,
+.ui-timepicker-wrapper.ui-timepicker-with-duration.ui-timepicker-step-60 {
+  width: 12em;
   }
-.bootstrap-timepicker.focus .form-control,
-.bootstrap-timepicker.focus .select2-search input[type="text"] {
-  border-color: #1abc9c;
+.ui-timepicker-wrapper.ui-timepicker-positioned-top {
+  margin-top: -5px;
   }
-.bootstrap-timepicker .add-on {
-  margin-right: -3px;
-  cursor: pointer;
-  border-right-width: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  }
-.bootstrap-timepicker .add-on i {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  }
-.bootstrap-timepicker-widget.dropdown-menu {
-  padding: 0;
-  margin-top: 11px;
-  background-color: #1abc9c;
-  border-radius: 6px !important;
-  box-shadow: -14px 14px 0 rgba(52, 73, 94, .06);
-  }
-.bootstrap-timepicker-widget.dropdown-menu.open {
-  display: inline-block;
-  visibility: visible;
-  filter: alpha(opacity=100);
-  opacity: 1;
-  }
-.bootstrap-timepicker-widget a.btn,
-.bootstrap-timepicker-widget input {
-  border-radius: 4px;
-  }
-.bootstrap-timepicker-widget table {
-  width: 100%;
+.ui-timepicker-list {
+  padding: 4px 0 0;
   margin: 0;
+  list-style: none;
   }
-.bootstrap-timepicker-widget table .separator {
-  min-width: 7px;
+.ui-timepicker-list li {
+  padding: 3px 0 3px 15px;
+  margin: 0;
   font-size: 15px;
+  font-weight: 500;
+  color: rgba(52, 73, 94, .9);
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
   }
-.bootstrap-timepicker-widget table td {
-  height: 30px;
-  margin: 0;
-  text-align: center;
+.ui-timepicker-list li .ui-timepicker-duration {
+  margin-left: 5px;
   }
-.bootstrap-timepicker-widget table td:not(.separator) {
-  width: 44px;
-  min-width: 30px;
-  }
-.bootstrap-timepicker-widget table td:first-child {
-  width: 51px;
-  padding-left: 7px;
-  }
-.bootstrap-timepicker-widget table td:last-child {
-  width: 51px;
-  padding-right: 7px;
-  }
-.bootstrap-timepicker-widget table td span {
-  width: 100%;
-  }
-.bootstrap-timepicker-widget table td a {
-  display: inline-block;
-  width: 100%;
-  padding: 8px 0;
-  margin: 0;
-  outline: 0;
-  }
-.bootstrap-timepicker-widget table td a i {
-  margin-top: 2px;
-  font-family: inherit;
-  color: #5fd0ba;
-  border-top-color: #5fd0ba;
-  border-right: 7px solid transparent;
-  border-bottom-color: #5fd0ba;
-  border-left: 7px solid transparent;
-  }
-.bootstrap-timepicker-widget table td a i:before {
-  content: "";
-  }
-.bootstrap-timepicker-widget table td a:hover i {
+.ui-timepicker-list li:hover,
+.ui-timepicker-list li.ui-timepicker-selected {
   color: #fff;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  background: #1abc9c;
   }
-.bootstrap-timepicker-widget table td a .glyphicon-chevron-up {
-  border-bottom-width: 12px;
-  }
-.bootstrap-timepicker-widget table td a .glyphicon-chevron-down {
-  border-top-width: 12px;
-  }
-.bootstrap-timepicker-widget table td input {
-  width: 25px;
-  height: 38px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 0;
-  text-align: center;
-  border: none;
-  border-radius: 6px !important;
-  }
-.bootstrap-timepicker-widget .modal-content {
-  padding: 4px;
+.ui-timepicker-input {
+  -webkit-appearance: none;
   }
 .pager {
   display: inline-block;
@@ -3855,7 +3725,8 @@ fieldset[disabled] .twitter-typeahead .tt-hint {
   color: #606d7a;
   }
 .dropdown-menu > li:first-child > a:first-child {
-  border-top-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   }
 .dropdown-menu > li:last-child > a:first-child {
   border-bottom-right-radius: 4px;
