@@ -1,2 +1,2 @@
 # mystory
-My writing
+A blog I made from scratch.
